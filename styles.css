@@ -6,12 +6,6 @@ body {
     line-height: 1.4;
     background-color: #FFDD14;
     color: #000000;
-    padding-top: env(safe-area-inset-top); /* 使用安全区域内边距 */
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
-    padding-bottom: env(safe-area-inset-bottom);
-    min-height: 100vh; /* 确保内容覆盖整个视口 */
-    box-sizing: border-box; /* 确保填充内边距计算在内容内 */
 }
 
 html {
