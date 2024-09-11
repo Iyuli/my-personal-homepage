@@ -379,7 +379,7 @@ h2 { /* 根据需要选择标题级别 */
     }
 
     .section {
-        padding: 20px; /* 调整 section 的内边距 */
+        padding: 1px 30px; /* 调整 section 的内边距 */
     }
 
     .project-item, .publication-list li {
