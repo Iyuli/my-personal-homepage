@@ -2,21 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Homepage</title>
+
+    <!-- Favicon 通用图标 -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    
+    <!-- PNG 格式的 Favicon 文件 -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="assets/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Noto+Sans+KR:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <title>Yiyu's Homepage</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .top-line {
+            text-align: left; /* 顶部文字靠左对齐 */
+            margin-bottom: 10px; /* 给顶部和底部段落之间增加一些间距 */
+            width: 100%; /* 确保宽度为100% */
+        }
+        .bottom-line {
+            text-align: center; /* 下面的段落文字居中对齐 */
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <nav class="navbar">
-            <a href="#" class="logo">My Name</a>
+            <a href="#" class="logo">Menu</a>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#papers">Papers <img src="paper icon.png" alt="Icon with Transparent Background" class="icon"></a></li>
+                <li><a href="#talks">Talks</a></li>
+                <li><a href="#art">Pottery Art</a></li>
+                <li><a href="#contact">Contact&Links</a></li>
             </ul>
+        <!-- 播动式按钮 -->
+        <div class="toggle-switch-container">
+             <span class="toggle-switch-text">Page Mode:</span>
+             <div class="toggle-switch">
+                  <input type="checkbox" id="toggle-design-switch" class="toggle-switch-checkbox">
+                  <label for="toggle-design-switch" class="toggle-switch-label">
+                      <span class="toggle-switch-inner"></span>
+                      <span class="toggle-switch-switch"></span>
+                  </label>
+              </div>
+        </div>
         </nav>
     </header>
 
@@ -24,39 +61,121 @@
     <main>
         <!-- About Section -->
         <section id="about" class="section">
-            <h1>About Me</h1>
-            <p>Write a brief introduction about yourself here. Highlight your background, interests, and key areas of work.</p>
+            <h1></h1>
+            <div class="about-content">
+                <img src="profitpic.JPG" alt="About Me" class="about-image">
+                <p class="bottom-line">It's Yiyu Li <span class="chinese">(李 翼羽)</span>. I'm now a math PhD student in Sichuan Univeristy. My research interests include: Quiver Representations, Derived categories, Hall algebras, Quivers with potentials and the Categorification of Cluster Algebras. </p>
+            </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="section">
-            <h2>Projects</h2>
+        <section id="papers" class="section">
+            <h2>Papers</h2>
             <div class="project-list">
                 <div class="project-item">
-                    <h3>Project Title</h3>
-                    <p>Description of the project goes here.</p>
+                     <div class="paper">[L. 2024] 2-cyclic Laurent Polynomial Algebras and its categorification, PhD Thesis (in Chinese).</div>
+                     <div class="paper">[L-Peng. 2024] Finite Dimensional 2-cyclic Jacobian Algebras, <a href="https://arxiv.org/abs/2408.10056" target="_blank">arXiv: 2408.10056</a></div>
+                     <div class="paper">[L-Peng. 2020] Semi-derived Ringle-Hall Bialgebras, <a href="https://arxiv.org/abs/2408.10056" target="_blank">arXiv: 2408.10056</a></div>
+                     <div class="paper">[L-Lu. 2021] Piecewise Hereditary Triangular Matrix Algebras, Algebra Colloquium, <a href="https://doi.org/10.1142/S1005386721000134" target="_blank"> DOI: 10.1142/S1005386721000134</a></div>                 
                 </div>
             </div>
         </section>
 
         <!-- Publications Section -->
-        <section id="publications" class="section">
-            <h2>Publications</h2>
+        <section id="talks" class="section">
+            <h2>Talks</h2>
             <ul class="publication-list">
-                <li>Paper Title 1 - Date - <a href="link_to_pdf">Download PDF</a></li>
+                <div class="presentation">[Koeln, Universitaet zu Koeln, 2024] 2-cyclic Laurent Polynomial Algebras and its categorification. [Koeln, Universitaet zu Kloen, 2022] Semi-derived Ringel-Hall Bialgebras. [Beijing, Beijing institute of Technology, 2021] Piecewise herediatry triangular matrix algebras.</div>
             </ul>
         </section>
 
+        <!-- Pottery Section -->
+        <section id="art" class="section">
+            <h2>Pottery Art</h2>
+            <div class="paper">This part is the exhibition of our (Me and Ziqi Peng) Potteries, we also warmly welcome everyone to reach out to us for custom pottery orders. The options include, but are not limited to: vases, teapots, mugs, espresso cups, and so on.</div>
+        </section>      
+
         <!-- Contact Section -->
         <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            <h2>Contact&Links</h2>
+            <div class="linking">Email: <a href="mailto:your.email@example.com">liyiyumath (at) gmail dot com</a> </div>  
+            <div class="linking">IMDb: <a href="https://www.imdb.com/user/ur182248976/ratings/?sort=top_rated%2Cdesc&view=grid" target="_blank">My Movie Ratings</a> </div> 
+            <div class="linking">Discogs: <a href="https://www.discogs.com/user/IYULI/collection" target="_blank">My Vinyl Collection</a></div>
         </section>
-    </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 My Name. All rights reserved.</p>
-    </footer>
+    </main>
+    <script>
+    function toggleDesign(e) {
+        if (e.target.checked) {
+            // 应用简化设计模式
+            document.body.style.backgroundColor = 'white';
+            document.body.style.color = 'black';
+            document.body.style.fontFamily = 'Ubuntu, Arial Black, Arial, sans-serif';
+
+            const header = document.querySelector('.header');
+            header.style.backgroundColor = 'rgba(238 ,247 ,242, 1)';
+            header.style.color = 'black';
+            header.style.fontFamily = 'Ubuntu, Arial Black, Arial, sans-serif';
+
+            const allSections = document.querySelectorAll('section');
+            allSections.forEach(section => {
+                section.style.backgroundColor = 'rgba(238 ,247 ,242, 1)';
+                section.style.color = 'black';
+                section.style.fontFamily = 'Ubuntu, Arial Black, Arial, sans-serif';
+            });
+
+            const allLinks = document.querySelectorAll('a');
+            allLinks.forEach(link => {
+                link.style.color = 'black';
+                link.style.textDecoration = 'none';
+                link.style.fontFamily = 'Ubuntu, Arial Black, Arial, sans-serif';
+            });
+
+            const allButtons = document.querySelectorAll('button');
+            allButtons.forEach(button => {
+                button.style.backgroundColor = 'white';
+                button.style.color = 'black';
+                button.style.border = '1px solid black';
+                button.style.fontFamily = 'Ubuntu, Arial Black, Arial, sans-serif';
+            });
+        } else {
+            // 恢复原始设计模式
+            document.body.style.backgroundColor = '';
+            document.body.style.color = '';
+            document.body.style.fontFamily = '';
+
+            // 恢复 header 样式
+            const header = document.querySelector('.header');
+            header.style.backgroundColor = ''; // 恢复原始背景
+            header.style.color = ''; // 恢复原始文字颜色
+            header.style.fontFamily = ''; // 恢复原始字体
+
+            const allSections = document.querySelectorAll('section');
+            allSections.forEach(section => {
+                section.style.backgroundColor = '';
+                section.style.color = '';
+                section.style.fontFamily = '';
+            });
+
+            const allLinks = document.querySelectorAll('a');
+            allLinks.forEach(link => {
+                link.style.color = '';
+                link.style.textDecoration = '';
+                link.style.fontFamily = '';
+            });
+
+            const allButtons = document.querySelectorAll('button');
+            allButtons.forEach(button => {
+                button.style.backgroundColor = '';
+                button.style.color = '';
+                button.style.border = '';
+                button.style.fontFamily = '';
+            });
+        }
+    }
+
+    // 为拨动按钮添加点击事件监听器
+    document.getElementById('toggle-design-switch').addEventListener('change', toggleDesign);
+    </script>
 </body>
 </html>
