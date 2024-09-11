@@ -11,10 +11,12 @@ body {
     padding-right: env(safe-area-inset-right);
     padding-bottom: env(safe-area-inset-bottom);
     min-height: 100vh; /* 确保内容覆盖整个视口 */
+    box-sizing: border-box; /* 确保填充内边距计算在内容内 */
 }
 
 html {
     background-color: #FFDD14; /* 背景颜色应与页面其他部分一致 */
+    min-height: 100%;
 }
 
 /* 导航栏样式 */
