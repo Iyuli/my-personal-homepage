@@ -8,6 +8,10 @@ body {
     color: #000000;
 }
 
+html {
+    background-color: #FFDD14; /* 背景颜色应与页面其他部分一致 */
+}
+
 /* 导航栏样式 */
 .header {
     background-color: #FFDD14;
