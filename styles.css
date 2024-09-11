@@ -83,7 +83,7 @@ a:active {
 
 /* Section 样式 */
 .section {
-    padding: 1px 30px; /* 调整内边距 */
+    padding: 0.5px 30px; /* 调整内边距 */
     margin: 0; /* 移除外边距 */
 }
 
@@ -334,4 +334,87 @@ h2 { /* 根据需要选择标题级别 */
 /* 页脚样式 */
 .footer {
     Display: none;
+}
+
+/* 响应式调整 */
+
+/* 手机设备 */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column; /* 将导航栏改为纵向排列 */
+        align-items: flex-start; /* 左对齐导航项 */
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column; /* 垂直排列导航链接 */
+        width: 100%; /* 链接占满可用宽度 */
+        padding: 0;
+    }
+    
+    .header {
+        font-size: 24px; /* 再次调整字体大小 */
+        position: relative;
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* 调整链接之间的间距 */
+    }
+
+    .about-content {
+        flex-direction: column; /* 将关于部分的内容纵向排列 */
+        align-items: center; /* 水平居中内容 */
+        padding: 0 1rem; /* 减少内边距 */
+    }
+
+    .about-image {
+        margin-bottom: 1rem; /* 增加图片和文字之间的间距 */
+        width: 100%; /* 图片占宽 */
+        max-width: 250px; /* 设置图片的最大宽度 */
+        height: auto; /* 自动调整高度以保持宽高比 */
+    }
+
+    .section {
+        padding: 20px; /* 调整 section 的内边距 */
+    }
+
+    .project-item, .publication-list li {
+        text-align: left; /* 使项目和出版物列表靠左对齐 */
+    }
+}
+
+/* 平板设备 */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .navbar {
+        flex-direction: row; /* 水平排列导航栏 */
+        justify-content: space-between; /* 两端对齐 */
+    }
+
+    .about-content {
+        flex-direction: row; /* 保持关于部分的内容横向排列 */
+        padding: 0 5rem; /* 调整内边距 */
+    }
+
+    .header {
+        font-size: 20px; /* 调整字体大小 */
+    }
+
+    .about-image {
+        width: 200px; /* 调整图片宽度 */
+    }
+    
+    .section {
+        padding: 30px; /* 调整 section 的内边距 */
+    }
+}
+
+/* 大屏设备 */
+@media (min-width: 1025px) {
+    .navbar {
+        justify-content: center; /* 导航栏居中对齐 */
+    }
+
+    .about-content {
+        padding: 0 10rem; /* 增加内边距 */
+    }
 }
