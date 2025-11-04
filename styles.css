@@ -279,6 +279,28 @@ a:active {
 
 #art {
     background-color: #BA52D8; /* purple */
+    padding-bottom: 3rem; /* 为下一个区块留出更舒适的间距 */
+}
+
+.art-gallery {
+    display: flex; /* 横向排列并自动换行 */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 1.5rem;
+}
+
+.art-image {
+    width: 320px; /* 放大陶艺图片 */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* 轻微阴影让作品更突出 */
+    margin: 0;
+}
+
+.art-image:nth-child(2n) {
+    margin-top: 30px; /* 偶数序号图片下沉营造错落感 */
 }
 
 #contact {
@@ -377,6 +399,15 @@ h2 { /* 根据需要选择标题级别 */
         width: 100%; /* 图片占宽 */
         max-width: 250px; /* 设置图片的最大宽度 */
         height: auto; /* 自动调整高度以保持宽高比 */
+    }
+
+    .art-image {
+        width: 95%; /* 手机端单列显示更大尺寸 */
+        margin-top: 0; /* 小屏恢复齐平 */
+    }
+
+    .art-image:nth-child(2n) {
+        margin-top: 0;
     }
 
     .section {
